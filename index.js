@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var git = require('gulp-git');
+var gulp = require('gulp');
 var modulepath = path.resolve('node_modules/gulp-enyo-builder');
 var enyo = modulepath + '/enyo';
 var exec = require('child_process').exec;
@@ -26,16 +27,10 @@ module.exports = function (opts) {
 
     var deploypath = enyo + '/tools/deploy.js';
     var buildCmd = ['nodejs ', deploypath, ' -T -e ', enyo, ' -s ', process.cwd(), ' -o ', process.cwd(), '/dist -l ', opts.lib];
-    var child = exec(buildCmd.join(''), function (error, stdout, stderr) {
 
+    return exec(buildCmd.join(''), function (error, stdout, stderr) {
         sys.print('stdout: ' + stdout);
         sys.print('stderr: ' + stderr);
-
-        if (error !== null) {
-
-            console.log('exec error: ' + error);
-        }
-
     });
 
 };

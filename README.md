@@ -13,10 +13,10 @@ load the module in your gulpfile
 
     var enyobuilder = require('gulp-enyo-builder');
 
-set the tag for the version of enyo to build against when calling builder
+set the tag for the version of enyo to build against when calling builder, if you had a lib dir you can set it with the lib option
 
     gulp.task('default', function () {
-        return builder({
+        return enyobuilder({
             tag: '2.4.0',
             lib: 'lib'
         })

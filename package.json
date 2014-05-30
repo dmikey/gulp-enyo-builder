@@ -1,32 +1,40 @@
 {
-    "name": "gulp-enyo-builder",
-    "version": "0.0.1",
-    "description": "build enyo applications and components with gulpjs",
-    "main": "index.js",
-    "devDependencies": {
-        "gulp-git": "^0.4.2",
-        "gulp": "^3.6.2"
-    },
-    "peerDependencies": {
-        "gulp-git": "^0.4.2",
-        "gulp": "^3.6.2"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/toxigenicpoem/gulp-enyo-builder.git"
-    },
-    "keywords": [
+  "name": "gulp-enyo-builder",
+  "version": "0.0.1",
+  "description": "build enyo applications and components with gulpjs",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp-git": "^0.4.2",
+    "gulp": "^3.6.2"
+  },
+  "peerDependencies": {
+    "gulp-git": "^0.4.2",
+    "gulp": "^3.6.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/toxigenicpoem/gulp-enyo-builder.git"
+  },
+  "keywords": [
     "gulpplugin",
     "gulp",
     "enyo"
   ],
-    "author": "Derek M. Anderson (toxigenicpoem@gmail.com)",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/toxigenicpoem/gulp-enyo-builder/issues"
-    },
-    "homepage": "https://github.com/toxigenicpoem/gulp-enyo-builder"
+  "author": {
+    "name": "Derek M. Anderson",
+    "url": "toxigenicpoem@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toxigenicpoem/gulp-enyo-builder/issues"
+  },
+  "homepage": "https://github.com/toxigenicpoem/gulp-enyo-builder",
+  "readme": "gulp-enyo-builder\n==================\n\nsimplified enyo build process. bring a local version of enyo with your project, locking in for build.\n\nbuild the required enyo version and your application in one swoop.\n\ninstall\n\n    npm install gulp-enyo-builder\n\nload the module in your gulpfile\n\n    var enyobuilder = require('gulp-enyo-builder');\n\nset the tag for the version of enyo to build against when calling builder\n\n    gulp.task('default', function () {\n        return builder({\n            tag: '2.4.0',\n            lib: 'lib'\n        })\n    });\n\nrequirements\n\n* deploy.json in top level of source\n* gulp-git\n\nwish list\n\n* test more scenarios\n* remove need to build Enyo, without modifying lock-in option\n* multiple enyo version support\n* centralized enyo management\n\nshortcomings\n\n* stores enyo in node_modules localized location\n\nhow it works\n\nclones the enyo core repo to node_modules (todo: add tag support), uses core deploy.js to manage a build. Produces files in dist.\n\nwhy I made this\n\nhad a need for a fluid way to build enyo components. We utilize enyo to build a vast assortment of silo'd components, it's nice to have a grunt task to include with other dev tasks.\n\nwhat you do not get\n\nthere is no template, or boiler plate here. this plug in assumes you are comfortable with scaffolding your own application, or are using another scaffold.",
+  "readmeFilename": "README.md",
+  "_id": "gulp-enyo-builder@0.0.1",
+  "_shasum": "6998d2b0fc7dfcefb5085b59f46be1fe50d064b9",
+  "_from": "gulp-enyo-builder@*"
 }
