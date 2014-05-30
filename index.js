@@ -2,7 +2,6 @@
 var fs = require('fs');
 var path = require('path');
 var git = require('gulp-git');
-var gulp = require('gulp');
 var modulepath = path.resolve('node_modules/gulp-enyo-builder');
 var enyo = modulepath + '/enyo';
 var exec = require('child_process').exec;
