@@ -1,6 +1,6 @@
 {
   "name": "gulp-enyo-builder",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "build enyo applications and components with gulpjs",
   "main": "index.js",
   "devDependencies": {
