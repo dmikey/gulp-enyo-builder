@@ -27,7 +27,7 @@ module.exports = function (opts) {
     }
 
     var deploypath = enyo + '/tools/deploy.js';
-    var buildCmd = ['nodejs ', deploypath, ' -T -e ', enyo, ' -s ', process.cwd(), ' -o ', process.cwd(), '/dist -l ', opts.lib];
+    var buildCmd = ['nodejs ', deploypath, ' -T -e ', enyo, ' -s ', opts.cwd, ' -o ', opts.cwd, '/dist -l ', opts.lib];
 
     return exec(buildCmd.join(''), function (error, stdout, stderr) {
         sys.print('stdout: ' + stdout);
