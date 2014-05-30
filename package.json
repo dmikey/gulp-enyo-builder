@@ -1,0 +1,32 @@
+{
+    "name": "gulp-enyo-builder",
+    "version": "0.0.1",
+    "description": "build enyo applications and components with gulpjs",
+    "main": "index.js",
+    "devDependencies": {
+        "gulp-git": "^0.4.2",
+        "gulp": "^3.6.2"
+    },
+    "peerDependencies": {
+        "gulp-git": "^0.4.2",
+        "gulp": "^3.6.2"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/toxigenicpoem/gulp-enyo-builder.git"
+    },
+    "keywords": [
+    "gulpplugin",
+    "gulp",
+    "enyo"
+  ],
+    "author": "Derek M. Anderson (toxigenicpoem@gmail.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/toxigenicpoem/gulp-enyo-builder/issues"
+    },
+    "homepage": "https://github.com/toxigenicpoem/gulp-enyo-builder"
+}
