@@ -12,6 +12,7 @@ module.exports = function (opts) {
     opts = opts || {};
     opts.cwd = opts.cwd || process.cwd();
     opts.tag = opts.tag || '2.4.0';
+    opts.lib = opts.lib || 'lib';
 
     try {
         //see if enyo has been cloned
